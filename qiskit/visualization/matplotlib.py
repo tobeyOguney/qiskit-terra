@@ -148,6 +148,7 @@ class MatplotlibDrawer:
         if ax is None:
             self.return_fig = True
             self.figure = plt.figure()
+            self.figure = plt.set_tight_layout(True)
             self.figure.patch.set_facecolor(color=self._style.bg)
             self.ax = self.figure.add_subplot(111)
         else:
